@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 
 export default class Navbar extends Component {
+  sortedCountries = () => {
+    return this.props.countries.sort(function (a, b) {
+      if (a.country.toLowerCase() < b.country.toLowerCase()) return -1;
+      if (a.country.toLowerCase() < b.country.toLowerCase()) return 1;
+      return 0;
+    });
+  };
+
   renderCountry = () => {
-    return this.props.countries.map((country, i) => {
+    //let sortedCountries = this.props.countries.sort();
+    return this.sortedCountries().map((country, i) => {
       return <option key={i}>{country.country}</option>;
     });
   };
@@ -12,7 +21,7 @@ export default class Navbar extends Component {
   };
 
   render() {
-    console.log(this);
+    //console.log(this.props.countries);
     return (
       <div className="nav">
         <div className="container">

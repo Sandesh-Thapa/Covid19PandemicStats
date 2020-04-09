@@ -74,6 +74,7 @@ export default class App extends Component {
 
   async getCountriesData() {
     const countries = await Axios.get("https://corona.lmao.ninja/countries");
+    //console.log(countries);
     this.setState({
       countries: countries.data,
     });
