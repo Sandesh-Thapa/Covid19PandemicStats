@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.nav {
+  background: #4cd137;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.nav h1 {
+  color: #1a4b12;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.select {
+  width: 60%;
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(101, 101, 101);
+  outline: none;
+}
+
+.live-map a {
+  text-decoration: none;
+  color: #1a4b12;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.live-map a:hover {
+  color: #3c8531;
+}
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: url("./assets/coronavirus-bg.jpg") no-repeat center;
+}
+
+.showcase .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1a4b12;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.main {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.main h4 {
+  text-align: center;
+  color: #b7ffaa;
+  font-size: 1.3rem;
+}
+
+.main .card-holder img {
+  width: 150px;
+}
+
+.main .card-holder {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+.main .card-holder .card {
+  width: 20%;
+}
+
+.main .card-holder .card h5 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.main .card-holder .card p {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  background: #ccc;
+}
+
+.wrapper .container {
+  padding-top: 20px;
+}
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #4cd137;
+  margin-bottom: 10px;
+}
+
+table thead {
+  background-color: #1a4b12;
+  color: #b7ffaa;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #45b533;
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px;
+}
+
+table img {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav h1 {
+    font-size: 0.75em;
+  }
+
+  .live-map a {
+    font-size: 0.75em;
+    text-decoration: underline;
+  }
+  .select {
+    font-size: 12px;
+  }
+
+  .showcase {
+    height: 50vh;
+  }
+
+  .main h4 {
+    font-size: 1rem;
+  }
+
+  .main .card-holder img {
+    width: 100px !important;
+  }
+
+  .main .card-holder .card h5,
+  .main .card-holder .card p {
+    font-size: 1rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 530px) {
+  .nav h1 {
+    font-size: 10px;
+  }
+
+  .live-map a {
+    font-size: 10px;
+    text-decoration: underline;
+  }
+
+  .showcase {
+    height: 50vh;
+  }
+
+  .main h4 {
+    font-size: 15px;
+  }
+
+  .main .card-holder img {
+    width: 80px !important;
+  }
+
+  .main .card-holder .card h5,
+  .main .card-holder .card p {
+    font-size: 15px;
+  }
+
+  table th,
+  table td {
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .select {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav h1 {
+    font-size: 8px;
+  }
+
+  .live-map a {
+    font-size: 8px;
+    text-decoration: underline;
+  }
+
+  .showcase {
+    height: 40vh;
+  }
+
+  .main h4 {
+    font-size: 10px;
+  }
+
+  .main .card-holder img {
+    width: 70px !important;
+  }
+
+  .main .card-holder .card h5,
+  .main .card-holder .card p {
+    font-size: 10px;
+  }
+
+  .select {
+    font-size: 8px;
+  }
+
+  table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #4cd137;
+    margin-bottom: 10px;
+  }
+
+  table img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav h1 {
+    font-size: 6px;
+  }
+
+  .live-map a {
+    font-size: 6px;
+    text-decoration: underline;
+  }
+  .main h4 {
+    font-size: 6px;
+  }
+
+  .main .card-holder img {
+    width: 50px !important;
+  }
+  table img {
+    width: 15px;
+    height: 15px;
+  }
+}
