@@ -23,6 +23,9 @@ code {
   color: #fff;
   width: 100%;
   padding: 10px 0;
+  position: fixed;
+  z-index: 5;
+  border-bottom: solid 3px #1a4b12;
 }
 
 .nav h1 {

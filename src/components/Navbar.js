@@ -18,6 +18,11 @@ export default class Navbar extends Component {
 
   handleChange = (e) => {
     this.props.select(e.target.value);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   render() {
