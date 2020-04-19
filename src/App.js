@@ -40,7 +40,7 @@ export default class App extends Component {
     if (Name === "Select country here...") {
       this.getWorldData();
     } else {
-      const url = `https://corona.lmao.ninja/countries/${Name}`;
+      const url = `https://corona.lmao.ninja/v2/countries/${Name}`;
       const countryNameRes = await Axios.get(url);
       //console.log(countryNameRes);
       this.setState({
@@ -73,7 +73,7 @@ export default class App extends Component {
   }
 
   async getCountriesData() {
-    const countries = await Axios.get("https://corona.lmao.ninja/countries");
+    const countries = await Axios.get("https://corona.lmao.ninja/v2/countries");
     //console.log(countries);
     this.setState({
       countries: countries.data,
@@ -81,7 +81,7 @@ export default class App extends Component {
   }
 
   async getWorldData() {
-    const report = await Axios.get("https://corona.lmao.ninja/all");
+    const report = await Axios.get("https://corona.lmao.ninja/v2/all");
     this.setState({
       confirmed: report.data.cases,
       recovered: report.data.recovered,
