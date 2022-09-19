@@ -55,7 +55,7 @@ export default class App extends Component {
   }
 
   async getCountriesData() {
-    const countries = await Axios.get(this.state.baseUrl);
+    const countries = await Axios.get(`${this.state.baseUrl}/countries`);
     this.setState({
       countries: countries.data,
     });
