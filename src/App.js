@@ -16,6 +16,7 @@ export default class App extends Component {
       countries: [],
       country: "Worldwide",
       flag: virus,
+      baseUrl:"https://disease.sh/v3/covid-19/countries"
     };
 
     this.selectCountry = this.selectCountry.bind(this);
@@ -54,7 +55,7 @@ export default class App extends Component {
   }
 
   async getCountriesData() {
-    const countries = await Axios.get("https://disease.sh/v3/covid-19/countries");
+    const countries = await Axios.get(this.state.baseUrl);
     //console.log(countries);
     this.setState({
       countries: countries.data,
